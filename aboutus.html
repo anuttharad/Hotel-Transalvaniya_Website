@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Hotel Transylvania Sigiriya</title>
+    
+
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <section class="about-section">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Welcome to <b>Hotel Transylvania Sigiriya</b>, your ultimate escape into luxury, comfort, and nature. Nestled in the heart of Sri Lanka’s cultural triangle, our hotel offers a breathtaking retreat with stunning views of the iconic Sigiriya Rock Fortress.</p>
+            
+            <h2>🌿 Our Story</h2>
+            <p>Founded with a passion for hospitality, we are dedicated to offering an unforgettable experience where elegance meets serenity. Our hotel seamlessly blends modern sophistication with Sri Lankan tradition, making every stay extraordinary.</p>
+
+            <h2>🏨 What We Offer</h2>
+            <ul>
+                <li>🌟 <b>Luxurious Accommodations</b> – Stay in elegantly designed rooms with stunning views.</li>
+                <li>🍽 <b>World-Class Dining</b> – Indulge in exquisite local and international cuisine.</li>
+                <li>🏊‍♂️ <b>Infinity Pool & Spa</b> – Relax and rejuvenate with our premium wellness services.</li>
+                <li>🚴 <b>Adventure & Exploration</b> – Discover Sigiriya, nearby national parks, and cultural landmarks.</li>
+                <li>🌱 <b>Sustainability Commitment</b> – We follow eco-friendly practices to preserve nature.</li>
+            </ul>
+
+            <h2>📍 Location</h2>
+            <p>Our prime location ensures easy access to top attractions like Sigiriya Rock, Pidurangala, and Minneriya National Park.</p>
+
+            <h2>✨ Experience the Best of Sigiriya</h2>
+            <p>At Hotel Transylvania Sigiriya, we go beyond just offering a place to stay—we provide a sanctuary where relaxation, adventure, and luxury come together. Book your stay today and let us create unforgettable memories for you.</p>
+        </div>
+    </section>
+
+ 
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript to Load Header & Footer -->
+    <script>
+        // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // Load Footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities - Hotel Transylvania Sigiriya</title>
+    <link rel="stylesheet" href="facilities.css">
+</head>
+
+
+<body>
+
+    <header>
+        <!-- Include Header -->
+        <div id="header"></div> <!-- Header will be loaded here -->
+    </header>
+
+
+    <main>
+        <!-- Banquets Section -->
+        <section class="facility">
+            <div class="facility-image">
+                <img src="Gallery/4.jpg" alt="Banquet Hall">
+            </div>
+            <div class="facility-text">
+                <h2>Banquets</h2>
+                <p>Our elegant banquet halls are ideal for weddings, corporate events, and celebrations.</p>
+                <button onclick="openBanquetForm()">Book a Banquet</button>
+            </div>
+        </section>
+
+        <!-- Banquet Booking Form -->
+        <div class="booking-form" id="banquetForm">
+            <h2>Banquet Booking</h2>
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" required>
+
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" min="10" required>
+
+            <button onclick="submitBanquet()">Submit</button>
+            <button onclick="closeBanquetForm()">Cancel</button>
+        </div>
+
+        <!-- Rooms Section -->
+        <section class="facility">
+            <div class="facility-image">
+                <img src="Gallery/37.jpg" alt="Rooms">
+            </div>
+            <div class="facility-text">
+                <h2>Rooms</h2>
+                <p>Experience luxury in our well-furnished rooms with modern amenities.</p>
+                <button onclick="openRoomForm()">Book a Room</button>
+            </div>
+        </section>
+
+        <!-- Room Booking Form -->
+        <div class="booking-form" id="roomForm">
+            <h2>Room Booking</h2>
+            <label for="check-in">Check-in Date:</label>
+            <input type="date" id="check-in" required>
+
+            <label for="check-out">Check-out Date:</label>
+            <input type="date" id="check-out" required>
+
+            <label for="room-type">Room Type:</label>
+            <select id="room-type">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <label for="room-guests">Number of Guests:</label>
+            <input type="number" id="room-guests" min="1" required>
+
+            <button onclick="submitRoom()">Submit</button>
+            <button onclick="closeRoomForm()">Cancel</button>
+        </div>
+
+
+
+
+         <!-- Dining and Cuisine Section -->
+         <section class="facility">
+            <div class="facility-image">
+                <img src="Gallery/31.jpg" alt="Dining and Cuisine">
+            </div>
+            <div class="facility-text">
+                <h2>Dining and Cuisine</h2>
+                <p>Indulge in a variety of cuisines at our exquisite restaurants, offering everything from local delicacies to international gourmet dishes.</p>
+                <button onclick="openDiningForm()">Reserve a Table</button>
+            </div>
+        </section>
+
+        <!-- Dining Reservation Form -->
+        <div class="booking-form" id="diningForm">
+            <h2>Dining Reservation</h2>
+            <label for="dining-date">Reservation Date:</label>
+            <input type="date" id="dining-date" required>
+
+            <label for="dining-time">Reservation Time:</label>
+            <input type="time" id="dining-time" required>
+
+            <label for="dining-guests">Number of Guests:</label>
+            <input type="number" id="dining-guests" min="1" required>
+
+            <button onclick="submitDining()">Submit</button>
+            <button onclick="closeDiningForm()">Cancel</button>
+        </div>
+
+
+    </main>
+
+    <script src="facilities.js"></script>
+
+
+    <script src="header.js"></script>
+
+
+</body>
+
+
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Hotel Transylvania Sigiriya</title>
+    <link rel="stylesheet" href="career.css">
+</head>
+<body>
+ <div id="header"></div>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build Your Career with Us</h1>
+            <p>Be a part of an exceptional hospitality team.</p>
+        </div>
+    </section>
+
+    <section class="job-listings">
+        <h2>Current Openings</h2>
+        <div class="job-cards">
+            <div class="job-card">
+                <h3>Front Desk Receptionist</h3>
+                <p>We are looking for a friendly and professional receptionist to greet our guests.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-card">
+                <h3>Chef de Cuisine</h3>
+                <p>Join our culinary team and showcase your passion for fine dining.</p>
+                <button>Apply Now</button>
+            </div>
+            <div class="job-card">
+                <h3>Housekeeping Staff</h3>
+                <p>Ensure our guests have a clean and comfortable stay.</p>
+                <button>Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="apply-form">
+        <h2>Apply Now</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="resume">Upload Resume</label>
+            <input type="file" id="resume" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    
+</body>
+
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+</html>

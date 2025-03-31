@@ -1,0 +1,55 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Contact Info */
+.contact-info h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}

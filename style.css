@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* Ensure it's on top */
+}
+
+/* Loader Content */
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Preloader Logo */
+.preloader-logo {
+    width: 120px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+
+/* Spinner Animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ffffff;
+    border-top: 5px solid red;
+    border-radius: 50%;
+    animation: spin 10s linear infinite;
+}
+
+/* Keyframes for spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade-in animation for logo */
+@keyframes fadeIn {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Hide Preloader After Loading */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-out;
+}
+
+
+/* popup.css */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);  /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it stays on top */
+}
+
+.popup-content {
+    text-align: center;
+    background:none;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    background: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.explore-btn:hover {
+    background: #c70039;
+}
+
+
+/* Disable scrolling while the popup is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.Top {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;        /* Ensures the video covers the full width */
+    height: 100%;       /* Ensures the video covers the full height */
+    object-fit: cover;  /* Prevents the video from being stretched */
+    z-index: -1;        /* Makes sure the video is behind other content */
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .myVideo {
+        width: 100%;    /* Keep width 100% for smaller screens */
+        height: 100vh;  /* Adjust height automatically for full screen */
+        object-fit: cover; /* Ensure it covers the full screen */
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .myVideo {
+        width: 100vw;   /* Make the video width cover the viewport width */
+        height: auto;   /* Adjust height based on the width */
+        object-fit: cover; /* Ensure the video covers the full screen */
+    }
+}
+
+
+/* Middle Section Styling */
+.Description {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.Description h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+
+.Description {
+    text-align: center;
+}
+
+.Description h1{
+    text-decoration: solid;
+    font-size: 60px;
+
+    
+
+}
+
+.Description h2{
+    margin-top: 40px;
+
+
+}
+
+.Description p{
+    margin-top: 40px;
+}
+
+
+/* Services Section */
+
+/* Make the entire service card clickable */
+.service-link {
+    text-decoration: none; /* Remove underline */
+}
+
+.service-card {
+    /* Your existing styles for the service card */
+    cursor: pointer; /* Optional: shows a pointer cursor when hovering over the card */
+}
+
+/* Optional hover effect */
+.service-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.services-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.services-section h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.services-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Service Card */
+.service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.gallery-section h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.gallery-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Gallery Grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Gallery Item */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+
+
+
+

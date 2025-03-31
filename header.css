@@ -1,0 +1,123 @@
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;  
+    z-index: 1000;
+    background: none;
+    padding: 10px 0;
+}
+
+/* Flex container for header */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Logo */
+.image-container img {
+    height: 80px; /* Reduced for better scaling */
+    width: 80px;
+    margin-left: 10px;
+}
+
+/* Title */
+.text h1 {
+    font-size: 18px; /* Adjusted for smaller screens */
+    white-space: nowrap;
+    margin-left: auto;
+    color: aliceblue;
+    padding: 5px 5px;
+    
+}
+
+.text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-block;
+    
+}
+
+/* Default Navigation */
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    
+  
+}
+
+/* Nav Links */
+.nav-bar li a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-bar li a:hover {
+    background: #555;
+}
+
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+    }
+
+    
+    /* Hide Navigation by Default */
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    /* Show Nav when Clicked */
+    .nav-bar ul.show {
+        display: flex;
+    }
+
+    .nav-bar li {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar li a {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
